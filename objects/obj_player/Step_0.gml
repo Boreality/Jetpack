@@ -6,6 +6,7 @@ key_left = keyboard_check(ord("A"));
 key_jump = keyboard_check_pressed(vk_space);
 key_jet = mouse_check_button_pressed(mb_right);
 key_sprint = keyboard_check(vk_shift);
+key_fire = mouse_check_button(mb_left);
 
 #endregion
 
@@ -26,7 +27,7 @@ if(place_meeting(x,y + 1, obj_wall ))
 if(key_jump) && (jumps > 0) 
 {
 	jumps -= 1;
-	vsp= -jumpspeed;
+	vsp = -jumpspeed;
 	if(!contact)
 	{
 		temp_explosion = instance_create_layer(x,y,"Bullet",obj_explosion);
@@ -70,7 +71,6 @@ y += vsp;
 
 #endregion
 
-//==Jetpack
 
 
 

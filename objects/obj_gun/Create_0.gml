@@ -1,2 +1,2 @@
 /// @desc
-firing_delay = 5;
+firing_delay = 10;
