@@ -33,7 +33,7 @@ if(key_jump) && (jumps > 0)
 		temp_explosion = instance_create_layer(x,y,"Bullet",obj_explosion);
 	}
 }
-with(temp_explosion)s
+with(temp_explosion)
 {
 	if (image_index == 4)
 	{

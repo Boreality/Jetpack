@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0ef5012e-45ae-4288-a876-49509fa88b3a",
+            "Value": {
+                "id": "fb452922-b306-4bf0-bfd7-a2f5e51a2e6a",
+                "resourcePath": "paths\\pth_enemy\\pth_enemy.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "1426a1d6-5be9-4ec2-9376-706cf454befe",
             "Value": {
                 "id": "407c00c7-0ec4-49e7-9643-05c161be5f73",
