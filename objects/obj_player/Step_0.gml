@@ -17,23 +17,47 @@ hsp = Move * walksp;
 
 vsp += grv;
 
+
+//Acceleration/Friction
+/*
+switch (keyboard_key)
+{
+	case ord("D"):
+		acce++;
+		break;
+	case ord("A"):
+		acce--;
+	default:
+		acce = 0;
+}
+clamp (acce,-1,1);
+*/
+
+
 //Double Jump
 
 if(place_meeting(x,y + 1, obj_wall ))
 {
 	jumps = jumpsmax;
-}
+	cy_time = cy_time_max;
+}else cy_time--;
 
-if(key_jump) && (jumps > 0) 
+if(key_jump) && (jumps > 0)
 {
-	jumps -= 1;
-	vsp = -jumpspeed;
-	if(!contact)
+	if(cy_time > 0)
 	{
-		temp_explosion = instance_create_layer(x,y,"Bullet",obj_explosion);
+		vsp = -jumpspeed;
+	}else
+	{
+		jumps -= 1;
+		vsp = -jumpspeed;
+	}
+	if(!contact) && (cy_time < 0)
+	{
+		instance_create_layer(x,y,"Bullet",obj_explosion);
 	}
 }
-with(temp_explosion)
+with(obj_explosion)
 {
 	if (image_index == 4)
 	{
@@ -46,6 +70,7 @@ if(key_sprint)	//Sprinting
 	walksp = 9;
 }
 else walksp = 6;
+
 
 #endregion
 
