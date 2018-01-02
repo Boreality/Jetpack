@@ -14,6 +14,8 @@ explosion_timer = 15;
 cy_time = 6;
 cy_time_max = 6;
 
+//Bullets
+firing_delay = 10;
 
 //Jumping
 jumps = 0;
