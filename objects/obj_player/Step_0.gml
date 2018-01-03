@@ -85,13 +85,42 @@ else walksp = 6;
 firing_delay--;
 if(key_fire) && (firing_delay <= 0)
 {
-	if (obj_gun.image_angle >= 225) && (obj_gun.image_angle <= 315) vsp -= 6;
-	if (obj_gun.image_angle >= 45) && (obj_gun.image_angle <= 135) vsp += 5;
+	if (obj_gun.image_angle >= 225) && (obj_gun.image_angle <= 315)
+	{
+		if(contact)
+		{
+			vsp -= contact_fire;
+		}else vsp -= no_contact_fire;
+	}
+	if (obj_gun.image_angle >= 45) && (obj_gun.image_angle <= 135) 
+	{
+		if(contact)
+		{
+			vsp += contact_fire;
+		}else vsp += no_contact_fire;
+	}
+	if (obj_gun.image_angle >= 135 ) && (obj_gun.image_angle <= 225)
+	{
+		if(contact)
+		{
+			hsp += contact_fire;
+		}else hsp += no_contact_fire;
+	}
 
-	if (obj_gun.image_angle >= 135 ) && (obj_gun.image_angle <= 225) hsp += 8;
-
-	if (obj_gun.image_angle >= 315 ) && (obj_gun.image_angle <= 360 )  hsp -= 8;
-	if (obj_gun.image_angle >= 0) && (obj_gun.image_angle <= 45)  hsp -= 8; 
+	if (obj_gun.image_angle >= 315 ) && (obj_gun.image_angle <= 360 )  
+	{
+		if(contact)
+		{
+			hsp -= contact_fire;
+		}else hsp -= no_contact_fire;
+	}
+	if (obj_gun.image_angle >= 0) && (obj_gun.image_angle <= 45) 
+	{
+		if(contact)
+		{
+			hsp -= contact_fire;
+		}else hsp -= no_contact_fire;
+	}
 	
 	firing_delay = 10;
 	with(instance_create_layer(x,y,"Bullet",obj_bullet))
