@@ -15,27 +15,28 @@ key_fire = mouse_check_button(mb_left);
 #region//Basic movement
 var Move = key_right - key_left;
 
-hsp = Move * walksp;
+hsp = Move * walksp; //+ acce;
 
 //Gravity
 vsp += grv;
 #endregion
  
 #region//Acceleration/Friction  UNDER CONSTRUCTION
-/*
-SHOULDNT BE SWITCH
-switch (keyboard_key)
+
+if(key_right) acce += 0.1;
+if(key_left) 
 {
-	case ord("D"):
-		acce++;
-		break;
-	case ord("A"):
-		acce--;
-	default:
-		acce = 0;
+	acce-= 0.1;
+}else{
+	if(!key_right)	
+	{
+		acce = 0;	
+
+	}
 }
 clamp (acce,-1,1);
-*/
+
+
 #endregion
 
 #region//Double Jump

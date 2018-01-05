@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "96cdf113-df84-44b1-9c7c-7e8d0178a072",
+            "Value": {
+                "id": "904b01d3-42bb-4685-a498-a8c04c0c551d",
+                "resourcePath": "sprites\\spr_buff_speed\\spr_buff_speed.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9802c2b7-9d3f-40d6-9f74-bd7f4f0e852a",
             "Value": {
                 "id": "34fe1eaa-5d69-46e2-b419-9222eb4ce6a3",
@@ -212,6 +220,14 @@
                 "id": "68002aa8-7d94-4bb4-9790-b082daac54b8",
                 "resourcePath": "views\\ad26c180-8251-4dde-9f6c-07966270ca1a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "bb42e451-c42b-4e58-af66-b7ede385379d",
+            "Value": {
+                "id": "bc3ecb57-5df6-4b11-bcae-0c0abfb17a8a",
+                "resourcePath": "objects\\obj_status\\obj_status.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -299,6 +315,14 @@
             "Value": {
                 "id": "33ea8a33-89f1-4a90-a6a6-a851e8bda64c",
                 "resourcePath": "objects\\obj_gun\\obj_gun.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "efa426ff-5f9c-4c2e-8d1e-4ceb6dcc9c56",
+            "Value": {
+                "id": "f0da6fb7-efd7-4d07-b803-93768a918974",
+                "resourcePath": "objects\\obj_buff_speed\\obj_buff_speed.yy",
                 "resourceType": "GMObject"
             }
         },
