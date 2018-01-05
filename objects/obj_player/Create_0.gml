@@ -16,8 +16,13 @@ cy_time_max = 6;
 
 //Bullets
 firing_delay = 10;
+contact_fire = 7;
+no_contact_fire = 12;
 
 //Jumping
 jumps = 0;
 jumpsmax = 1;		//Amount of jumps allowed. Number is -1 (ex. 1 = 2 jumps)
 jumpspeed = 17;
+
+//Technical
+version = 0.4;
