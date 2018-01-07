@@ -59,6 +59,20 @@
             "value": "0",
             "varName": "buff_type",
             "varType": 0
+        },
+        {
+            "id": "6dcd642c-8455-4739-a456-36e3df0fa968",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1.5",
+            "varName": "buff_strong",
+            "varType": 0
         }
     ],
     "solid": false,

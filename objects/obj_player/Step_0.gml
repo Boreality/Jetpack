@@ -86,6 +86,7 @@ else walksp = 6;
 firing_delay--;
 if(key_fire) && (firing_delay <= 0)
 {
+	ScreenShake(6,10);
 	if (obj_gun.image_angle >= 225) && (obj_gun.image_angle <= 315)
 	{
 		if(contact)

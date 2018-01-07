@@ -1,2 +1,2 @@
 /// @desc
-room_restart();
+game_restart();
