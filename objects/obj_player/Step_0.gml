@@ -84,54 +84,58 @@ else walksp = 6;
 #region//==Bullet Recoil
 //Gun recoil
 firing_delay--;
-if(key_fire) && (firing_delay <= 0)
+if(ammo > 0) && (key_fire)
 {
-	ScreenShake(6,10);
-	if (obj_gun.image_angle >= 225) && (obj_gun.image_angle <= 315)
+	if(firing_delay <= 0)
 	{
-		if(contact)
+		ammo--;
+		ScreenShake(6,10);
+		if (obj_gun.image_angle >= 225) && (obj_gun.image_angle <= 315)
 		{
-			vsp -= contact_fire;
-		}else vsp -= no_contact_fire;
-	}
-	if (obj_gun.image_angle >= 45) && (obj_gun.image_angle <= 135) 
-	{
-		if(contact)
+			if(contact)
+			{
+				vsp -= contact_fire;
+			}else vsp -= no_contact_fire;
+		}
+		if (obj_gun.image_angle >= 45) && (obj_gun.image_angle <= 135) 
 		{
-			vsp += contact_fire;
-		}else vsp += no_contact_fire;
-	}
-	if (obj_gun.image_angle >= 135 ) && (obj_gun.image_angle <= 225)
-	{
-		if(contact)
+			if(contact)
+			{
+				vsp += contact_fire;
+			}else vsp += no_contact_fire;
+		}
+		if (obj_gun.image_angle >= 135 ) && (obj_gun.image_angle <= 225)
 		{
-			hsp += contact_fire;
-		}else hsp += no_contact_fire;
-	}
+			if(contact)
+			{
+				hsp += contact_fire;
+			}else hsp += no_contact_fire;
+		}
 
-	if (obj_gun.image_angle >= 315 ) && (obj_gun.image_angle <= 360 )  
-	{
-		if(contact)
+		if (obj_gun.image_angle >= 315 ) && (obj_gun.image_angle <= 360 )  
 		{
-			hsp -= contact_fire;
-		}else hsp -= no_contact_fire;
-	}
-	if (obj_gun.image_angle >= 0) && (obj_gun.image_angle <= 45) 
-	{
-		if(contact)
+			if(contact)
+			{
+				hsp -= contact_fire;
+			}else hsp -= no_contact_fire;
+		}
+		if (obj_gun.image_angle >= 0) && (obj_gun.image_angle <= 45) 
 		{
-			hsp -= contact_fire;
-		}else hsp -= no_contact_fire;
-	}
+			if(contact)
+			{
+				hsp -= contact_fire;
+			}else hsp -= no_contact_fire;
+		}
 	
-	firing_delay = 10;
-	with(instance_create_layer(x,y,"Bullet",obj_bullet))
-	{
-		speed = 15;
-		direction = obj_gun.image_angle + random_range(-3,3);
-		image_angle = direction;
+		firing_delay = 10;
+		with(instance_create_layer(x,y,"Bullet",obj_bullet))
+		{
+			speed = 15;
+			direction = obj_gun.image_angle + random_range(-3,3);
+			image_angle = direction;
+		}
 	}
-}
+}else //Play clicking sound
 #endregion
 
 #region//==Collision

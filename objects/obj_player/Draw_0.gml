@@ -11,3 +11,4 @@ draw_text(cx+cw/2,cy+50,"Timer: " + string(obj_start.timer));
 draw_text(cx+cw/2,cy+70,"Coyote time:" + string(cy_time));
 draw_text(cx+cw/2,cy+90,"Effect Duration:" + string(obj_status.duration));
 draw_text(cx+cw/2,cy+110,"Buff Effect: " + string(obj_status.buff_strong));
+draw_text(cx+cw/2,cy+130,"Ammo:" + string(ammo));
