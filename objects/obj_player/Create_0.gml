@@ -18,6 +18,7 @@ cy_time_max = 6;
 firing_delay = 15;
 contact_fire = 7;
 no_contact_fire = 12;
+ammo = 10;
 
 //Jumping
 jumps = 0;
