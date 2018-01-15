@@ -15,28 +15,11 @@ key_fire = mouse_check_button(mb_left);
 #region//Basic movement
 var Move = key_right - key_left;
 
-hsp = Move * walksp; //+ acce;
+hsp = Move * walksp + fire_recoil;
 
+hsp = clamp(hsp,-15,15)
 //Gravity
 vsp += grv;
-#endregion
- 
-#region//Acceleration/Friction  UNDER CONSTRUCTION
-
-if(key_right) acce += 0.1;
-if(key_left) 
-{
-	acce-= 0.1;
-}else{
-	if(!key_right)	
-	{
-		acce = 0;	
-
-	}
-}
-clamp (acce,-1,1);
-
-
 #endregion
 
 #region//Double Jump
@@ -108,23 +91,23 @@ if(ammo > 0) && (key_fire)
 		{
 			if(contact)
 			{
-				hsp += contact_fire;
-			}else hsp += no_contact_fire;
+				fire_recoil += contact_fire;
+			}else fire_recoil += no_contact_fire;
 		}
 
 		if (obj_gun.image_angle >= 315 ) && (obj_gun.image_angle <= 360 )  
 		{
 			if(contact)
 			{
-				hsp -= contact_fire;
-			}else hsp -= no_contact_fire;
+				fire_recoil -= contact_fire;
+			}else fire_recoil -= no_contact_fire;
 		}
 		if (obj_gun.image_angle >= 0) && (obj_gun.image_angle <= 45) 
 		{
 			if(contact)
 			{
-				hsp -= contact_fire;
-			}else hsp -= no_contact_fire;
+				fire_recoil -= contact_fire;
+			}else fire_recoil -= no_contact_fire;
 		}
 	
 		firing_delay = 10;
@@ -136,6 +119,25 @@ if(ammo > 0) && (key_fire)
 		}
 	}
 }else //Play clicking sound
+
+if(fire_recoil > 0)
+{
+	fire_recoil_delay--;
+	if(fire_recoil_delay == 0)
+	{
+		fire_recoil = 0;	
+		fire_recoil_delay = 3;
+	}
+}
+if(fire_recoil < 0)
+{
+	fire_recoil_delay--;
+	if(fire_recoil_delay == 0)
+	{
+		fire_recoil = 0;
+		fire_recoil_delay = 3;
+	}
+}
 #endregion
 
 #region//==Collision

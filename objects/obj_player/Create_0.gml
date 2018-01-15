@@ -2,7 +2,7 @@
 
 hsp = 0;
 vsp = 0;
-grv = 1;
+grv = 0.8;
 walksp = 10;
 acce = 0;
 
@@ -16,14 +16,16 @@ cy_time_max = 6;
 
 //Bullets
 firing_delay = 15;
-contact_fire = 7;
-no_contact_fire = 12;
-ammo = 10;
+contact_fire = 5;
+no_contact_fire = 10;
+ammo = 50;
+fire_recoil = 0;
+fire_recoil_delay = 3;
 
 //Jumping
 jumps = 0;
 jumpsmax = 1;		//Amount of jumps allowed. Number is -1 (ex. 1 = 2 jumps)
-jumpspeed = 25;
+jumpspeed = 17;
 
 //Technical
 version = 0.4;
