@@ -1,3 +1,3 @@
-obj_player.ammo += 5;
+obj_player.ammo += 12;
 
 instance_destroy();

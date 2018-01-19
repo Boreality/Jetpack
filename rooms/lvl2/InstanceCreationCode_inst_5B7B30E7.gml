@@ -1,0 +1,1 @@
+path_start(pth_enemy2,2,1,1);

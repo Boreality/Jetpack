@@ -161,3 +161,56 @@ else contact = false;
 y += vsp;
 
 #endregion
+
+
+#region//Animation
+
+if (hsp != 0) 
+{
+	image_xscale = sign(hsp); 
+	image_speed = 2;
+}else
+{
+	image_speed = 0;
+	image_index = 0;
+}
+
+if(!contact)
+{
+	sprite_index = spr_player_air;
+	if(vsp < 0)
+	{
+		image_index = 0;
+	}
+	if(vsp > 0)
+	{
+		image_index = 1;	
+	}
+}
+else sprite_index = spr_player;
+
+with(obj_gun)
+{
+	if(image_angle >= 90) && (image_angle <= 230) image_yscale = -1; else image_yscale = 1;
+	
+}
+
+
+#endregion
+
+
+//Timer
+if(place_meeting(x,y,obj_finish))
+	{
+		with(obj_score)		//All score
+		{
+			if(score_check)
+			{
+				score_time += obj_start.timer;
+				score_active = true;
+				score_check = false;
+			}
+		}
+		obj_start.trigger = false;	
+		obj_start.done = true;
+	} 
