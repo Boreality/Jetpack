@@ -20,6 +20,7 @@ draw_text(cx + 10,cy + 10,"Timer: " + string(obj_start.timer / 60));
 
 if(score_present)
 {	
-	draw_set_font(fnt_score)
+	draw_set_font(fnt_score)	
 	draw_text(cx+cw/2 - 200,cy + 200,"Time taken: [" + string(obj_score.score_time) + "]Enemy Bonus: [" + string(obj_score.score_enemy ) + "]Total: [" + string(obj_score.score_total) + "]");	
+	draw_text(cx+cw/2 - 200,cy + 300, "Press [ENTER] to proceed to the next level. Or [R] to retry")
 }

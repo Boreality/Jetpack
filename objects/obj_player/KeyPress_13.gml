@@ -1,2 +1,5 @@
 /// @desc
-room_goto_next();
+if(score_present)
+{
+	room_goto_next();
+}

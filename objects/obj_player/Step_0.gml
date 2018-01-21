@@ -201,7 +201,8 @@ with(obj_gun)
 
 //Timer
 if(place_meeting(x,y,obj_finish))
-	{
+	{	
+		
 		with(obj_score)		//All score
 		{
 			if(score_check)
@@ -209,6 +210,7 @@ if(place_meeting(x,y,obj_finish))
 				score_time += obj_start.timer;
 				score_active = true;
 				score_check = false;
+				ScreenShake(10,4)
 			}
 		}
 		obj_start.trigger = false;	

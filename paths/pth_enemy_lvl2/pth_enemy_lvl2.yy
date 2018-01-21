@@ -2,7 +2,7 @@
     "id": "f49f6bb0-5260-4fb3-8f60-84afedf950ea",
     "modelName": "GMPath",
     "mvc": "1.0",
-    "name": "pth_enemy2",
+    "name": "pth_enemy_lvl2",
     "closed": true,
     "hsnap": 0,
     "kind": 1,

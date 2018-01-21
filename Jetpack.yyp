@@ -42,7 +42,7 @@
             "Key": "0ef5012e-45ae-4288-a876-49509fa88b3a",
             "Value": {
                 "id": "fb452922-b306-4bf0-bfd7-a2f5e51a2e6a",
-                "resourcePath": "paths\\pth_enemy1\\pth_enemy1.yy",
+                "resourcePath": "paths\\pth_enemy_lvl1\\pth_enemy_lvl1.yy",
                 "resourceType": "GMPath"
             }
         },
@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "32965bbb-8c78-44de-b8f3-e606ffe670aa",
+            "Value": {
+                "id": "f9546f42-274b-414d-84ee-751bc9d60e56",
+                "resourcePath": "sounds\\snd_gun_click\\snd_gun_click.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "33fb5d76-c4c6-4a19-a391-3f30b300ff30",
             "Value": {
                 "id": "fdbdf9ff-30df-4669-ac02-423bf1c9170a",
@@ -132,6 +140,14 @@
                 "id": "f1e07dce-2bab-4fa7-b61a-db2a575a675d",
                 "resourcePath": "objects\\obj_bullet\\obj_bullet.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4abb18ed-0655-4175-a4df-73009df8ce33",
+            "Value": {
+                "id": "4aad792c-0e2f-405c-abdf-b2b0c60694dc",
+                "resourcePath": "rooms\\lvl3\\lvl3.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -426,7 +442,7 @@
             "Key": "f49f6bb0-5260-4fb3-8f60-84afedf950ea",
             "Value": {
                 "id": "8e9810f6-85cd-493b-84f9-187cfd934415",
-                "resourcePath": "paths\\pth_enemy2\\pth_enemy2.yy",
+                "resourcePath": "paths\\pth_enemy_lvl2\\pth_enemy_lvl2.yy",
                 "resourceType": "GMPath"
             }
         },
