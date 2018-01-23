@@ -31,7 +31,22 @@
     "physicsShape": 1,
     "physicsShapePoints": null,
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "89b9652c-48a7-4108-a096-921ed107d876",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "7",
+            "varName": "ammo_give",
+            "varType": 0
+        }
+    ],
     "solid": false,
     "spriteId": "4b8e0f99-3c76-47dd-87c1-d6e3bdf6974d",
     "visible": true

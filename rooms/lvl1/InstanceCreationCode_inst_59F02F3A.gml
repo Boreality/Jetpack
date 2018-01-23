@@ -1,1 +1,1 @@
-path_start(pth_enemy1,2,1,1);
+path_start(pth_enemy_lvl1,2,1,1);

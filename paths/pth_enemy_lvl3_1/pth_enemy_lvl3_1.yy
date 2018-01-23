@@ -1,42 +1,42 @@
 {
-    "id": "0ef5012e-45ae-4288-a876-49509fa88b3a",
+    "id": "b745bdf0-477c-4b1a-9784-89487dd2f566",
     "modelName": "GMPath",
     "mvc": "1.0",
-    "name": "pth_enemy_lvl1",
+    "name": "pth_enemy_lvl3_1",
     "closed": true,
     "hsnap": 0,
     "kind": 1,
     "points": [
         {
-            "id": "090350fd-59f4-49c8-bf31-4a8b81e730de",
+            "id": "ff95035d-9272-4f7a-850c-2d84e0313d9e",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 544,
-            "y": 2176,
+            "x": 416,
+            "y": 2240,
             "speed": 100
         },
         {
-            "id": "a9c97dc5-55f6-4dc6-b5e9-1f2f8d4df4a3",
+            "id": "2067e1f3-ebd0-4809-b027-fba4e82483aa",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
             "x": 288,
-            "y": 2400,
+            "y": 2432,
             "speed": 100
         },
         {
-            "id": "8631f1c8-c599-46cc-9158-a2a25964dbac",
+            "id": "5b8e89a7-27e1-43ba-9b1e-727a5826504a",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 512,
-            "y": 2688,
+            "x": 416,
+            "y": 2560,
             "speed": 100
         },
         {
-            "id": "2f490a04-b998-4ce1-a18c-b95c29e0d528",
+            "id": "5e9c9e76-30f3-4176-90d5-26b0af32ae8a",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 704,
-            "y": 2464,
+            "x": 544,
+            "y": 2432,
             "speed": 100
         }
     ],

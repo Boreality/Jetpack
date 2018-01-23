@@ -1,0 +1,1 @@
+path_start(pth_enemy_lvl3_1,2,1,1);

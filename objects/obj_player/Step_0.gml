@@ -17,7 +17,7 @@ var Move = key_right - key_left;
 
 hsp = Move * walksp + fire_recoil;
 
-hsp = clamp(hsp,-15,15)
+hsp = clamp(hsp,-15,20)
 //Gravity
 vsp += grv;
 #endregion
@@ -113,7 +113,7 @@ if(ammo > 0) && (key_fire)
 		firing_delay = 10;
 		with(instance_create_layer(x,y,"Bullet",obj_bullet))
 		{
-			speed = 15;
+			speed = 25;
 			direction = obj_gun.image_angle + random_range(-3,3);
 			image_angle = direction;
 		}
@@ -208,8 +208,9 @@ if(place_meeting(x,y,obj_finish))
 			if(score_check)
 			{
 				score_time += obj_start.timer;
-				score_active = true;
-				score_check = false;
+				score_active = true;	//Triggers obj score calculations
+				score_check = false;	//To make it happen once
+				other.score_present = true
 				ScreenShake(10,4)
 			}
 		}
