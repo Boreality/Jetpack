@@ -1,4 +1,8 @@
 /// @desc
+var cx = camera_get_view_x(obj_camera.cam);
+var cy = camera_get_view_y(obj_camera.cam);
+var cw = camera_get_view_width(obj_camera.cam);
+var ch = camera_get_view_height(obj_camera.cam)
 
 draw_set_font(fnt_timer);
 
@@ -9,6 +13,7 @@ draw_text(850,1000,"Ammo:" + string(ammo));
 if(score_present)
 {	
 	draw_set_font(fnt_score)	
-	draw_text(850,550,"Time taken: [" + string(obj_score.score_time) + "]Enemy Bonus: [" + string(obj_score.score_enemy ) + "]Total: [" + string(obj_score.score_total) + "]");	
-	draw_text(850,600, "Press [ENTER] to proceed to the next level. Or [R] to retry")
+	draw_text(650,550,"Time taken: [" + string(obj_score.score_time) + "]Enemy Bonus: [" + string(obj_score.score_enemy ) + "]Total: [" + string(obj_score.score_total) + "]");		
+	draw_text(650,600, "Press [ENTER] to proceed to the next level. Or [R] to retry")
 }
+

@@ -1,1 +1,1 @@
-ammo_give = 4;
+ammo_give = 7;

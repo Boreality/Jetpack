@@ -1,5 +1,5 @@
 
-#region//==Input
+#region//=Input
 
 key_right = keyboard_check(ord("D"));
 key_left = keyboard_check(ord("A"));
@@ -12,7 +12,7 @@ key_fire = mouse_check_button(mb_left);
 
 
 //==Movement
-#region//Basic movement
+#region//=Basic movement
 var Move = key_right - key_left;
 
 hsp = Move * walksp + fire_recoil;
@@ -22,7 +22,7 @@ hsp = clamp(hsp,-15,20)
 vsp += grv;
 #endregion
 
-#region//Double Jump
+#region//==Double Jump
 if(place_meeting(x,y + 1, obj_wall ))
 {
 	jumps = jumpsmax;
@@ -51,7 +51,7 @@ with(obj_explosion)
 }
 #endregion
 
-#region//Sprinting
+#region//=Sprinting
 
 if(key_sprint)	
 {
@@ -64,7 +64,7 @@ else walksp = 6;
 
 
 
-#region//==Bullet Recoil
+#region//===Bullet Recoil
 //Gun recoil
 firing_delay--;
 if(ammo > 0) && (key_fire)
@@ -163,19 +163,19 @@ y += vsp;
 #endregion
 
 
-#region//Animation
+#region//==Animation
 
-if (hsp != 0) 
+if (hsp != 0)	//Allowing while moving different angles and animation speed
 {
 	image_xscale = sign(hsp); 
 	image_speed = 2;
-}else
+}else			//Stopping movement and placing sprite to standing frame when still
 {
 	image_speed = 0;
 	image_index = 0;
 }
 
-if(!contact)
+if(!contact)	//Air animation
 {
 	sprite_index = spr_player_air;
 	if(vsp < 0)
@@ -189,7 +189,7 @@ if(!contact)
 }
 else sprite_index = spr_player;
 
-with(obj_gun)
+with(obj_gun)		//Changing Gun angle based
 {
 	if(image_angle >= 90) && (image_angle <= 230) image_yscale = -1; else image_yscale = 1;
 	
@@ -198,8 +198,7 @@ with(obj_gun)
 
 #endregion
 
-
-//Timer
+#region==//Timer
 if(place_meeting(x,y,obj_finish))
 	{	
 		
@@ -217,3 +216,4 @@ if(place_meeting(x,y,obj_finish))
 		obj_start.trigger = false;	
 		obj_start.done = true;
 	} 
+#endregion
