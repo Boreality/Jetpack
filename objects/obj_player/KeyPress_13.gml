@@ -1,5 +1,5 @@
 /// @desc
 if(score_present)
 {
-	if(room != lvl3) room_goto_next();
+	if(room != lvl4) room_goto_next();
 }

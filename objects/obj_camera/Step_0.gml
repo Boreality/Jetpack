@@ -9,6 +9,7 @@ if(instance_exists(follow))
 }
  
 //Keep camera center inside room
+
 x = clamp(x,view_w_half+shake_buff,room_width-view_w_half-shake_buff);
 y = clamp(y,view_h_half+shake_buff,room_height-view_h_half-shake_buff);
 

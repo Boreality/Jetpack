@@ -10,7 +10,7 @@ draw_text(15,10,"Timer: " + string(obj_start.timer / 60));
 
 draw_text(850,1000,"Ammo:" + string(ammo));
 
-if(score_present)
+if(score_present) && (room != End)
 {	
 	draw_set_font(fnt_score)	
 	draw_text(650,550,"Time taken: [" + string(obj_score.score_time) + "]Enemy Bonus: [" + string(obj_score.score_enemy ) + "]Total: [" + string(obj_score.score_total) + "]");		

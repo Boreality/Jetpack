@@ -1,4 +1,4 @@
-
+ 
 #region//=Input
 
 key_right = keyboard_check(ord("D"));
@@ -31,7 +31,7 @@ if(place_meeting(x,y + 1, obj_wall ))
 
 if(key_jump) && (jumps > 0)
 {
-	if(cy_time > 0)
+	if(cy_time > 0)	//Coyote Time
 	{
 		vsp = -jumpspeed;
 	}
@@ -42,7 +42,13 @@ if(key_jump) && (jumps > 0)
 	}
 	if(!contact) && (cy_time < 0)
 	{
+		vsp -= 1;
 		instance_create_layer(x,y,"Bullet",obj_explosion);
+		
+		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
 	}
 }
 with(obj_explosion)
@@ -201,7 +207,10 @@ with(obj_gun)		//Changing Gun angle based
 #region==//Timer
 if(place_meeting(x,y,obj_finish))
 	{	
-		
+		if(room == End)
+		{
+			game_end();	
+		}
 		with(obj_score)		//All score
 		{
 			if(score_check)
