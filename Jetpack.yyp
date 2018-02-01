@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "639c06a5-898e-42dd-9c61-25d1a36c3c99",
+            "Value": {
+                "id": "73e9ed2e-9722-46a1-a514-97df6e86825c",
+                "resourcePath": "sounds\\snd_gun_firing\\snd_gun_firing.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "64eb0c1c-bb71-4e8a-afd5-e50afdd04e55",
             "Value": {
                 "id": "1f5ccb7c-c776-47ac-b8e0-14ab0c25ee69",
@@ -324,6 +332,14 @@
                 "id": "9f20a356-37fa-4cfd-b22a-8dfe39a58224",
                 "resourcePath": "rooms\\lvl1\\lvl1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "9204aaec-64fa-4e16-87ad-efeabe60793d",
+            "Value": {
+                "id": "db1ddfe7-7741-43f9-a395-caab6be8b451",
+                "resourcePath": "sounds\\snd_jetpack\\snd_jetpack.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -452,6 +468,14 @@
                 "id": "2e7b9dd3-0de6-45f9-a55f-825713236a66",
                 "resourcePath": "sprites\\spr_gun\\spr_gun.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ce3eeecd-8a66-4743-b5ae-8a48c41b49f5",
+            "Value": {
+                "id": "a455477f-4bc2-4936-a666-7e0cb463d0df",
+                "resourcePath": "sounds\\snd_bullet_impact\\snd_bullet_impact.yy",
+                "resourceType": "GMSound"
             }
         },
         {

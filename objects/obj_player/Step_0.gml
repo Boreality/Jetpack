@@ -17,12 +17,13 @@ var Move = key_right - key_left;
 
 hsp = Move * walksp + fire_recoil;
 
-hsp = clamp(hsp,-15,20)
+//hsp = clamp(hsp,-15,20)
 //Gravity
 vsp += grv;
 #endregion
 
 #region//==Double Jump
+
 if(place_meeting(x,y + 1, obj_wall ))
 {
 	jumps = jumpsmax;
@@ -44,7 +45,8 @@ if(key_jump) && (jumps > 0)
 	{
 		vsp -= 1;
 		instance_create_layer(x,y,"Bullet",obj_explosion);
-		
+		audio_play_sound(snd_jetpack,4,0);
+	
 		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
 		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
 		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
@@ -55,6 +57,7 @@ with(obj_explosion)
 {
 	if (image_index == 4) instance_destroy();	
 }
+
 #endregion
 
 #region//=Sprinting
@@ -78,7 +81,7 @@ if(ammo > 0) && (key_fire)
 	if(firing_delay <= 0)
 	{
 		ammo--;
-		ScreenShake(6,10);
+		ScreenShake(10,10);
 		if (obj_gun.image_angle >= 225) && (obj_gun.image_angle <= 315)
 		{
 			if(contact)
@@ -117,6 +120,7 @@ if(ammo > 0) && (key_fire)
 		}
 	
 		firing_delay = 10;
+		//audio_play_sound(snd_gun_firing,3,0);
 		with(instance_create_layer(x,y,"Bullet",obj_bullet))
 		{
 			speed = 25;
@@ -124,26 +128,20 @@ if(ammo > 0) && (key_fire)
 			image_angle = direction;
 		}
 	}
-}else //Play clicking sound
+	}
 
-if(fire_recoil > 0)
+
+if(fire_recoil != 0)
 {
 	fire_recoil_delay--;
 	if(fire_recoil_delay == 0)
 	{
 		fire_recoil = 0;	
-		fire_recoil_delay = 3;
+		fire_recoil_delay = 10;
 	}
+	
 }
-if(fire_recoil < 0)
-{
-	fire_recoil_delay--;
-	if(fire_recoil_delay == 0)
-	{
-		fire_recoil = 0;
-		fire_recoil_delay = 3;
-	}
-}
+
 #endregion
 
 #region//==Collision
