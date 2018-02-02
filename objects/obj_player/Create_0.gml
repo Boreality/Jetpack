@@ -19,8 +19,10 @@ firing_delay = 15;
 contact_fire = 5;
 no_contact_fire = 10;
 ammo = 0;
+
+//Bullets Recoil
 fire_recoil = 0;
-fire_recoil_delay = 3;
+fire_recoil_delay = 6;
 
 //Jumping
 jumps = 0;
