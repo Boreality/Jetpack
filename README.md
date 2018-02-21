@@ -7,6 +7,6 @@ Oh yea a jetpack. Well thats really the same for the double jump. Or justificati
 It is also keeping track of time. 
 And a scoring system.
 
-Currently only accecible by opening it in Gamemaker Studio 2
+Currently only accesible by opening it in Gamemaker Studio 2
 
 -B
