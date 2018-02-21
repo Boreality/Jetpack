@@ -1,2 +1,5 @@
 /// @desc
-room_restart();
+if(room != End)
+{
+	room_restart();
+}

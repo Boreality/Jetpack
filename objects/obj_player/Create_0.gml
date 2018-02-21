@@ -8,8 +8,10 @@ acce = 0;
 
 contact = false;
 
+//Timers
 temp_explosion = 0;
 explosion_timer = 15;
+footstep_timer = 0;
 
 cy_time = 6;
 cy_time_max = 6;
@@ -32,3 +34,8 @@ jumpspeed = 17;
 //Technical
 version = 1.00;
 score_present = false;
+
+if(room == End)
+{
+	audio_play_sound(snd_ending,2,false);	
+}

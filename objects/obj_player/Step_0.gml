@@ -1,5 +1,4 @@
- 
-#region//=Input
+ #region//=Input
 
 key_right = keyboard_check(ord("D"));
 key_left = keyboard_check(ord("A"));
@@ -120,7 +119,7 @@ if(ammo > 0) && (key_fire)
 		}
 	
 		firing_delay = 10;
-		//audio_play_sound(snd_gun_firing,3,0);
+		audio_play_sound(snd_gun_firing,3,0);
 		with(instance_create_layer(x,y,"Bullet",obj_bullet))
 		{
 			speed = 25;
@@ -199,6 +198,14 @@ with(obj_gun)		//Changing Gun angle based
 	
 }
 
+if(sprite_index == spr_player)
+{
+	if(image_index == 0)	
+	{
+		
+	}
+}
+
 
 #endregion
 
@@ -224,3 +231,4 @@ if(place_meeting(x,y,obj_finish))
 		obj_start.done = true;
 	} 
 #endregion
+
