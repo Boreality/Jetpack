@@ -10,3 +10,8 @@ if(!alive)
 	}
 
 }
+
+if(room == End)
+{
+	image_index = 1;	
+}

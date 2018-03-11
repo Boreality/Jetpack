@@ -4,3 +4,5 @@
 respawn_timer = room_speed * 5;
 respawn_timer_always = room_speed * 5;
 alive = true;
+
+image_speed = 0;
