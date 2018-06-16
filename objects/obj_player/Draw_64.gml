@@ -8,7 +8,7 @@ draw_set_font(fnt_timer);
 
 draw_text(15,10,"Timer: " + string(obj_start.timer / 60));
 
-draw_text(850,1000,"Ammo:" + string(ammo));
+draw_text(15,50,"Ammo:" + string(ammo));
 
 if(score_present) && (room != End)
 {	

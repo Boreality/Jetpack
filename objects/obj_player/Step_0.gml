@@ -159,12 +159,12 @@ if(place_meeting(x,y + vsp,obj_wall))
 	if(vsp >= 30)		//Ground shake polish
 	{
 		ScreenShake(15,25);
-		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
-		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
-		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
-		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
-		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
-		instance_create_layer(x,y,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y+50,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y+50,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y+50,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y+50,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y+50,"Bullet",obj_jetpack_particles);
+		instance_create_layer(x,y+50,"Bullet",obj_jetpack_particles);
 	}
 	vsp = 0;
 	contact = true;
