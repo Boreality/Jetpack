@@ -1,4 +1,6 @@
 /// @desc
+display_set_gui_size(camera_get_view_width(obj_camera.cam),camera_get_view_height(obj_camera.cam));
+
 var cx = camera_get_view_x(obj_camera.cam);
 var cy = camera_get_view_y(obj_camera.cam);
 var cw = camera_get_view_width(obj_camera.cam);
